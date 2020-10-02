@@ -20,7 +20,7 @@ var appObj = {
       return nameList;
     },
     displayData: function () {
-      return rnd;
+      return 10;
     },
   },
 };
