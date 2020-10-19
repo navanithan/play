@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8"/>
     <!--script type="module" src="./js/data.js"></script-->
     <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
@@ -23,16 +24,17 @@
   </head>
   <body>
     <div id="app">
-      <div>{{}}</div>
+      <!--div><v-btn @click="callTo()">Normal</v-btn></div-->
+      <!--div><button onclick="callTo()">Normal</button></div-->
       <v-app>
         <v-main>
           <v-container>
-            <v-select :items="getPlaynames()"></v-select>
+            <v-select :items="getPlaynames()" v-model="selectedPlay"></v-select>
           </v-container>
         </v-main>
         <v-row justify="space-around">
-          <v-avatar color="orange" size="62">
-            <span class="white--text headline">{{displayData()}}</span>
+          <v-avatar color="orange" size="162">
+            <span class="white--text headline">{{curDisplayValue}}</span>
           </v-avatar>
         </v-row>
       </v-app>
