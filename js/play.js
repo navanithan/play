@@ -47,4 +47,4 @@ var appObj = {
 
 };
 var playApp = new Vue(appObj);
-let playTimer = setInterval(playApp.displayData,1000);
+let playTimer = setInterval(playApp.displayData,500);
