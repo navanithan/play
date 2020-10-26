@@ -1,8 +1,8 @@
 //import play_data from "data.js";
 var play_data = {
   data: [
-    { name: "Tamil", items: [1, 2, 3, 4,5,6,7,8,9,10,11,12,13,14] },
-    { name: "English", items: ["A", "B", "C"] },
+    { name: "Tamil", items: [1, 2, 3, 4,5,6,7,8,9,10] },
+    { name: "English", items: ["A", "B", "C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"	] },
     { name: "Japanese", items: ["あ", "い", "う","え","お","か","き","く","け","こ",,"さ","し","す","せ","そ","た","ち","つ","て","と","な","に","ぬ","ね"] },
     { name: "Small English", items: ["a", "b", "c","d","e","f"] },
   ],
@@ -47,4 +47,8 @@ var appObj = {
 
 };
 var playApp = new Vue(appObj);
-let playTimer = setInterval(playApp.displayData,500);
+let playTimer = setInterval(playApp.displayData,4000);
+function callTo(){
+	playApp.displayData();
+	
+}
