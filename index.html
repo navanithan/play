@@ -25,17 +25,57 @@
   <body>
     <div id="app">
       <!--div><v-btn @click="callTo()">Normal</v-btn></div-->
-      <div><button onclick="callTo()">Normal</button></div>
+      <div><button onclick="callTo()">Normal</button>
+	  
+	  </div>
+	  
       <v-app>
+	  
+	      <v-toolbar light>
+      <v-slider
+        v-model="playSpeed"
+        step="1"
+        thumb-label
+        ticks
+		 :max="60"
+          :min="1"
+      ></v-slider>
+      <v-spacer></v-spacer>
+      <v-toolbar-items class="hidden-sm-and-down">
+                  <v-select :items="getPlaynames()" v-model="selectedPlay"></v-select>
+			   
+
+      
+
+    <v-checkbox
+      v-model="randomDis"
+      label="Random"
+      value="Random"
+    ></v-checkbox>
+		 
+      </v-toolbar-items>
+    </v-toolbar>
+	  
         <v-main>
           <v-container>
-            <v-select :items="getPlaynames()" v-model="selectedPlay"></v-select>
+
+
+
+
+
+
           </v-container>
         </v-main>
         <v-row justify="space-around">
-          <v-avatar color="blue" size="600">
-            <span style="color:white;font-size:500px;">{{curDisplayValue}}</span>
+		<v-col>
+		
+		          <v-avatar color="blue" size="600">
+            <span style="color:white;font-size:300px;">{{curDisplayValue}}</span>
           </v-avatar>
+		 
+		
+		</v-col>
+
         </v-row>
       </v-app>
     </div>
