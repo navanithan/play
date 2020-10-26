@@ -31,7 +31,14 @@
 	  
       <v-app>
 	  
-	      <v-toolbar light>
+	     <v-row
+          :align="align"
+          no-gutters
+          style="height: 150px;"
+        >
+          <v-col>
+            
+        
       <v-slider
         v-model="playSpeed"
         step="1"
@@ -39,22 +46,23 @@
         ticks
 		 :max="60"
           :min="1"
-      ></v-slider>
-      <v-spacer></v-spacer>
-      <v-toolbar-items class="hidden-sm-and-down">
-                  <v-select :items="getPlaynames()" v-model="selectedPlay"></v-select>
+      > </v-slider>
+	   </v-col>
+	 
+	 <v-col> <v-select :items="getPlaynames()" v-model="selectedPlay"></v-select></v-col>
+	 <v-col>    <v-checkbox
+      v-model="randomDis"
+      label="Random"
+      value="Random"
+    ></v-checkbox></v-col>
+      </v-row>
+          
 			   
 
       
 
-    <v-checkbox
-      v-model="randomDis"
-      label="Random"
-      value="Random"
-    ></v-checkbox>
-		 
-      </v-toolbar-items>
-    </v-toolbar>
+
+
 	  
         <v-main>
           <v-container>
