@@ -13,7 +13,7 @@ var play_data = {
 
 var appObj = {
   el: "#app",
-  data: { playData: play_data, selectedPlay: play_data.data[0].name, curDisplayValue:"",playSpeed:1,randomDis:null,fontSize:30 },
+  data: { playData: play_data, selectedPlay: play_data.data[0].name, curDisplayValue:"",playSpeed:100,randomDis:null,fontSize:30 },
   vuetify: new Vuetify(),
   methods: {
     getPlaynames: function(){
