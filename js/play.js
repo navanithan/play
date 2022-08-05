@@ -50,7 +50,7 @@ var appObj = {
 
 };
 var playApp = new Vue(appObj);
-let playTimer = setInterval(playApp.displayData,playApp.playSpeed*1000);
+let playTimer = setInterval(playApp.displayData,playApp.playSpeed*3000);
 function callTo(){
 	playApp.displayData();
 	console.log(playSpeed);
